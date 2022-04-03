@@ -1,0 +1,36 @@
+.menu-card-container, .menu-table-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.card-container, table-title-container{
+    width: 90%;
+    min-width: 320px;
+    max-width: 1075px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.card-title, .table-title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.card-title h2{
+   padding-top: 20px;
+   font-size: 2rem;
+   font-weight: bold;
+   line-height: 2.6rem;
+   color: #2b303b;
+}
+
+.table-products{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+}

@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import './App.css';
+import CarritoDeCompras from './views/CarritoDeCompras';
+import CatalogoDeProductos from'./views/CatalogoDeProductos';
 
 const App = () => {
   // -------------------------------------------------
@@ -19,12 +23,22 @@ const App = () => {
   // -------------------------------------------------
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1> Prueba tecnica front Ecomsur 2021</h1>
-      <p>Borra esto y comienza aqui.</p>
-      {/* Check to see if express server is running correctly */}
-      <h5>{response}</h5>
-    </div>
+    <>
+      <Router>
+        <div className="router-container">
+          <Switch>
+            <Route path="/" exact>
+              <CatalogoDeProductos data={response} />
+            </Route>
+          </Switch>
+          <Switch>
+            <Route path="/carrito" exact>
+              <CarritoDeCompras/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </>
   )
 }
 
